@@ -1,0 +1,63 @@
+Name : Parvas Hossain Piash
+ID: 19202103200
+Intake: 44
+Section: 5
+
+( Lab Performance )
+
+ 1. Linear Search with Arrays:
+
+#include<bits/stdc++.h>
+using namespace std;
+int NUM(int arr[], int n, int x)
+{
+ int k;
+ for (k = 0; k <= n; k++)
+ if (arr[k] == x)
+ return k;
+ return -1;
+}
+int main()
+{
+ int arr[] = { 2, 3, 4, 10, 40 };
+int x = 10;
+ int n = sizeof(arr) / sizeof(arr[0]);
+
+ int result = NUM(arr, n, x);
+
+ if (result == -1)
+ cout << "Number is not present in Array";
+ else
+ cout << "Number is present at Index " << result<<endl;
+ return 0;
+}
+
+ 2. Linear Search with Vector:
+
+#include<bits/stdc++.h>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main()
+{
+ vector<int>piash;
+ piash.push_back(2);
+ piash.push_back(4);
+ piash.push_back(10);
+ piash.push_back(40);
+ piash.push_back(55);
+ cout<<"Print the Vector Array"<<endl;
+ vector<int>::iterator p;
+ for(p=piash.begin(); p!=piash.end(); p++)
+ {
+ cout<<*p<<endl;
+ }
+ cout<<"\n";
+ vector<int>::iterator it;
+ it = find (piash.begin(), piash.end(), 40);
+ if (it != piash.end())
+ cout << "Element found in Vector: " << *it << '\n';
+ else
+ cout << "Element not found in Vector\n";
+ return 0;
+}
